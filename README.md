@@ -1,4 +1,4 @@
-# Walles Johan
+# Johan's Stuff
 
 ## How do I install these formulae?
 
