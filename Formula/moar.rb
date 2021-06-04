@@ -1,8 +1,8 @@
 class Moar < Formula
   desc "A pager that is designed to be nice to use"
   homepage "https://github.com/walles/moar"
-  url "https://github.com/walles/moar/releases/download/v1.8.1/moar-v1.8.1-darwin-amd64"
-  sha256 "f0b28cd1ab0795b8f3b7c50ccdfc83bf5459ba10e9b8922d6dc372775cb82708"
+  url "https://github.com/walles/moar/archive/refs/tags/v1.8.1.tar.gz"
+  sha256 "f4edbca2cce46e64d033536958d813ed70e7668ab52316cb87e42cccdb00eaaf"
   license "BSD-2-Clause"
 
   depends_on "go" => :build
