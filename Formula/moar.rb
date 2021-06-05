@@ -1,5 +1,5 @@
 class Moar < Formula
-  desc "Pager that is designed to be nice to use"
+  desc "Nice to use pager for humans"
   homepage "https://github.com/walles/moar"
   url "https://github.com/walles/moar.git",
     using:    :git,
