@@ -9,7 +9,8 @@ class Moar < Formula
   depends_on "go" => :build
 
   def install
-    system "./install.sh"
+    system "./build.sh"
+    bin.install "moar"
   end
 
   test do
