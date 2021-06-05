@@ -15,6 +15,10 @@ class Moar < Formula
   end
 
   test do
-    system "./test.sh"
+    # Test piping something through moar
+    (testpath/"test.file").write <<~EOS
+      tyre kicking
+    EOS
+    assert_equal "tyre kicking", shell_output("moar test.file").strip
   end
 end
