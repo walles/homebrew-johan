@@ -9,8 +9,8 @@ class Px < Formula
     revision: "aea41c2a67a8b83e644e11d8ac152e2c123d0ee1"
   license "MIT"
 
-  depends_on "python@3.9"
   depends_on "lsof"
+  depends_on "python@3.9"
 
   # For updates: https://pypi.org/project/six/
   resource "six" do
@@ -31,6 +31,6 @@ class Px < Formula
   test do
     # These shouldn't crash
     system "px"
-    system "px", "#{Process.pid}"
+    system "px", Process.pid.to_s
   end
 end
