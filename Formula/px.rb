@@ -10,13 +10,27 @@ class Px < Formula
   license "MIT"
 
   depends_on "python@3.9"
+  depends_on "lsof"
+
+  # For updates: https://pypi.org/project/six/
+  resource "six" do
+    url "https://files.pythonhosted.org/packages/71/39/171f1c67cd00715f190ba0b100d606d440a28c93c7714febeca8b79af85e/six-1.16.0.tar.gz"
+    sha256 "1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"
+  end
+
+  # For updates: https://pypi.org/project/python-dateutil/#files
+  resource "python-dateutil" do
+    url "https://files.pythonhosted.org/packages/be/ed/5bbc91f03fa4c839c4c7360375da77f9659af5f7086b7a7bdda65771c8e0/python-dateutil-2.8.1.tar.gz"
+    sha256 "73ebfe9dbf22e832286dafa60473e4cd239f8592f699aa5adaf10050e6e1823c"
+  end
 
   def install
     virtualenv_install_with_resources
   end
 
   test do
-    # This shouldn't crash
+    # These shouldn't crash
     system "px"
+    system "px", "#{Process.pid}"
   end
 end
