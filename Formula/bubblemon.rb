@@ -36,8 +36,9 @@ class Bubblemon < Formula
     prefix.install "build/Release/Bubblemon TouchBar.app"
     prefix.install "build/Release/Bubblemon Menu Bar.app"
 
-    # FIXME: open "/Applications/Bubblemon.app" --args --reinstall
-    # FIXME: open "/Applications/Bubblemon Menu Bar.app"
-    # FIXME: open "/Applications/Bubblemon TouchBar.app" --args --reinstall
+    # Start bubbling
+    system "open", "#{prefix}/Bubblemon.app", "--args", "--reinstall"
+    system "open", "#{prefix}/Bubblemon Menu Bar.app"
+    system "open", "#{prefix}/Bubblemon TouchBar.app", "--args", "--reinstall"
   end
 end
