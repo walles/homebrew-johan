@@ -32,9 +32,9 @@ class Bubblemon < Formula
       "-target", "Bubblemon",
       "-target", "Bubblemon TouchBar",
       "-target", "Bubblemon Menu Bar"
-    prefix.install "build/Release/Bubblemon.app"
-    prefix.install "build/Release/Bubblemon TouchBar.app"
-    prefix.install "build/Release/Bubblemon Menu Bar.app"
+    prefix.install "osx/build/Release/Bubblemon.app"
+    prefix.install "osx/build/Release/Bubblemon TouchBar.app"
+    prefix.install "osx/build/Release/Bubblemon Menu Bar.app"
 
     # Start bubbling
     system "open", "#{prefix}/Bubblemon.app", "--args", "--reinstall"
