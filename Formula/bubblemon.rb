@@ -26,19 +26,36 @@ class Bubblemon < Formula
     false
   end
 
+  def install_app(build_path, prefix)
+    # Example value: "Bubblemon TouchBar.app"
+    app_name = build_path.split('/')[-1]
+    fail if app_name.empty?  # Safety first, we will be removing things!
+
+    # Install into the Homebrew Cellar dir
+    prefix.install build_path
+
+    # Clean up any existing app
+    applications_path = "/Applications/#{app_name}"
+    FileUtils.remove_entry_secure applications_path if FileTest.exist? applications_path
+
+    # Make this app visible in /Applications
+    File.symlink("#{prefix}/#{app_name}", applications_path)
+  end
+
   def install
     xcodebuild "build",
       "-project", "osx/bubblemon.xcodeproj",
       "-target", "Bubblemon",
       "-target", "Bubblemon TouchBar",
       "-target", "Bubblemon Menu Bar"
-    prefix.install "osx/build/Release/Bubblemon.app"
-    prefix.install "osx/build/Release/Bubblemon TouchBar.app"
-    prefix.install "osx/build/Release/Bubblemon Menu Bar.app"
+
+    install_app "osx/build/Release/Bubblemon.app", prefix
+    install_app "osx/build/Release/Bubblemon TouchBar.app", prefix
+    install_app "osx/build/Release/Bubblemon Menu Bar.app", prefix
 
     # Start bubbling
-    system "open", "#{prefix}/Bubblemon.app", "--args", "--reinstall"
-    system "open", "#{prefix}/Bubblemon Menu Bar.app"
-    system "open", "#{prefix}/Bubblemon TouchBar.app", "--args", "--reinstall"
+    system "open", "/Applications/Bubblemon.app", "--args", "--reinstall"
+    system "open", "/Applications/Bubblemon Menu Bar.app"
+    system "open", "/Applications/Bubblemon TouchBar.app", "--args", "--reinstall"
   end
 end
