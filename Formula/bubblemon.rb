@@ -35,10 +35,10 @@ class Bubblemon < Formula
     prefix.install build_path
 
     # Clean up any existing app
-    applications_path = "/Applications/#{app_name}"
+    applications_path = "#{Dir.home}/Applications/#{app_name}"
     FileUtils.remove_entry_secure applications_path if FileTest.exist? applications_path
 
-    # Make this app visible in /Applications
+    # Make this app visible in ~/Applications
     File.symlink("#{prefix}/#{app_name}", applications_path)
   end
 
