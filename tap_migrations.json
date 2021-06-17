@@ -1,3 +1,4 @@
 {
-    "moar": "homebrew/core"
+    "moar": "homebrew/core",
+    "px": "homebrew/core"
 }
