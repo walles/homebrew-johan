@@ -4,7 +4,7 @@ class Riffdiff < Formula
   url "https://github.com/walles/riff.git",
     using:    :git,
     tag:      "2.20.0",
-    revision: "f20ed994cdd3f16ba96fbc3dc378a7bd5bfceb29"
+    revision: "b24b967d952a8b7cf538d57d12aae8019cedada2"
   license "MIT"
 
   depends_on "rust" => :build
