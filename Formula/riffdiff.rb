@@ -3,8 +3,8 @@ class Riffdiff < Formula
   homepage "https://github.com/walles/riff"
   url "https://github.com/walles/riff.git",
     using:    :git,
-    tag:      "2.19.0",
-    revision: "7db7a0d5ee380280fead109f6122c03d3dcedaa1"
+    tag:      "2.20.0",
+    revision: "b24b967d952a8b7cf538d57d12aae8019cedada2"
   license "MIT"
 
   depends_on "rust" => :build
