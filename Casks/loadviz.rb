@@ -7,5 +7,12 @@ cask "loadviz" do
   desc "System Load Visualization in the Menu Bar"
   homepage "https://github.com/walles/loadviz/"
 
+  depends_on macos: ">= :big_sur"
+  caveats do
+    # Not signed, will need cuddling after install:
+    # https://docs.brew.sh/Cask-Cookbook#caveats-mini-dsl
+    unsigned_accessibility
+  end
+
   app "LoadViz.app"
 end
