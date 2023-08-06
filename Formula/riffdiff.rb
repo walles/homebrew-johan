@@ -1,10 +1,8 @@
 class Riffdiff < Formula
   desc "Diff filter highlighting which line parts have changed"
   homepage "https://github.com/walles/riff"
-  url "https://github.com/walles/riff.git",
-    using:    :git,
-    tag:      "2.23.3",
-    revision: "432c0b08523818e461eded0407a009db2e795996"
+  url "https://github.com/walles/riff/archive/2.23.3.tar.gz"
+  sha256 "17bd2f34e7e6657a71737de972a8da903e72b255e21327e93e9afb08d9e340c3"
   license "MIT"
 
   depends_on "rust" => :build
