@@ -13,6 +13,6 @@ class Riffdiff < Formula
 
   test do
     # Test with two identical files, should output nothing and succeed
-    assert_equal "", shell_output("riff /etc/passwd /etc/passwd").strip
+    assert_equal "", shell_output("#{bin}/riff /etc/passwd /etc/passwd").strip
   end
 end
