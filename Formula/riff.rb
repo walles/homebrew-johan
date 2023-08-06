@@ -1,4 +1,4 @@
-class Riffdiff < Formula
+class Riff < Formula
   desc "Diff filter highlighting which line parts have changed"
   homepage "https://github.com/walles/riff"
   url "https://github.com/walles/riff/archive/2.23.3.tar.gz"
