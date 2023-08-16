@@ -5,6 +5,9 @@ class Riff < Formula
   sha256 "c0a2d0c6beaab92431f6846a25544b3d63b3ea433e33c9db9aa9f5a5d65f1d97"
   license "MIT"
 
+  deprecate! date: "2023-08-16", because: "Moved to homebrew core, do: \
+    brew uninstall riff && brew untap walles/johan && brew install riff"
+
   depends_on "rust" => :build
 
   def install
