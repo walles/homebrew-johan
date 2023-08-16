@@ -7,6 +7,8 @@ class Riff < Formula
 
   depends_on "rust" => :build
 
+  deprecate! date: "2023-08-16", because: "Moved to homebrew core, do: brew uninstall riff && brew untap walles/johan && brew install riff"
+
   def install
     system "cargo", "install", *std_cargo_args
   end
