@@ -1,5 +1,5 @@
 class Ftop < Formula
-  desc "top for Human Beings"
+  desc "Top for Human Beings"
   homepage "https://github.com/walles/ftop"
   url "https://github.com/walles/ftop/archive/refs/tags/v0.0.4.tar.gz"
   sha256 "c8cda9350c427ff569ee7768db7cb6cdb203e1bd046759d071383dfae26b6d94"
