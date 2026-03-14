@@ -1,8 +1,8 @@
 class Ftop < Formula
   desc "Top for Human Beings"
   homepage "https://github.com/walles/ftop"
-  url "https://github.com/walles/ftop/archive/refs/tags/v0.0.10.tar.gz"
-  sha256 "a259ff62b933b93121e8d8e862884076b01dfbffb3cd3095ab770d1e4e8b02ab"
+  url "https://github.com/walles/ftop/archive/refs/tags/v0.0.11.tar.gz"
+  sha256 "8093c7712f6a8eec03c10009c83c2e4ceeaff0039ef1a08b1459c16f34540638"
   license "MIT"
   head "https://github.com/walles/ftop.git", branch: "main"
 
