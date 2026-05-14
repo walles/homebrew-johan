@@ -7,7 +7,7 @@ cask "loadviz" do
   desc "System Load Visualization in the Menu Bar"
   homepage "https://github.com/walles/loadviz/"
 
-  depends_on macos: ">= :big_sur"
+  depends_on macos: :big_sur
 
   app "LoadViz.app"
 end
