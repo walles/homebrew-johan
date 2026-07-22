@@ -10,4 +10,14 @@ cask "loadviz" do
   depends_on macos: :big_sur
 
   app "LoadViz.app"
+
+  caveats <<~EOS
+    LoadViz is ad-hoc signed rather than notarized by Apple, so macOS
+    Gatekeeper blocks it the first time you launch it.
+
+    To open it, launch it once, be denied, then go to
+    System Settings > Privacy & Security and click "Open Anyway".
+
+    After this one-time step LoadViz launches normally.
+  EOS
 end
