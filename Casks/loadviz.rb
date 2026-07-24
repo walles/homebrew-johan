@@ -1,6 +1,6 @@
 cask "loadviz" do
-  version "1.2.5"
-  sha256 "718286fe5fd56b69a5fa3d9dbfe2d14d94743653212184229d0fb94d5ca1f0cd"
+  version "1.2.6"
+  sha256 "72dba00cc8665371cc3077bb9a1a6b1fa110fd9880976691b012b5285a7ea3fe"
 
   url "https://github.com/walles/loadviz/releases/download/macos-#{version}/LoadViz-macos-#{version}.tar.bz2"
   name "LoadViz"
